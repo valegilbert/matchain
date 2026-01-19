@@ -22,8 +22,16 @@ data.xlsx
 data_backup.xlsx
 
 # Data Folders (Real Data)
-input/
+# Ignore all contents of input/ and backup/ by default
+input/*
 backup/
+
+# --- EXCEPTIONS (File yang BOLEH masuk Git) ---
+# But keep the example file and the folder structure
+!input/contoh_excel.xlsx
+# Keep the directories, even if empty
+!input/.gitkeep
+!backup/.gitkeep
 
 # IDE Settings
 .idea/
@@ -36,5 +44,4 @@ Desktop.ini
 .DS_Store
 
 # --- EXCEPTIONS (File yang BOLEH masuk Git) ---
-!contoh_excel.xlsx
 !.env.example

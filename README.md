@@ -66,8 +66,9 @@ Anda bisa menggunakan salah satu dari daftar berikut:
 `Mozilla/5.0 (Linux; Android 4.4.4; Nexus 5 Build/KRT16S; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.1599.107 Mobile Safari/537.36`
 
 ### 4. Siapkan Data
-1.  Letakkan semua file Excel yang ingin diproses ke dalam folder **`input/`**.
-2.  Pastikan format kolom di file Excel Anda sesuai dengan file **`contoh_excel.xlsx`**.
+1.  Buka folder **`input/`**.
+2.  Letakkan semua file Excel yang ingin Anda proses di dalam folder ini.
+3.  Pastikan format kolom di file Excel Anda sesuai dengan file **`contoh_excel.xlsx`** yang sudah ada di dalamnya.
 
 Kolom wajib di setiap file Excel:
 - `perusahaan_id` (Text/String)
@@ -104,3 +105,6 @@ Sebelum menjalankan aplikasi, pastikan data Excel Anda memenuhi aturan berikut:
 - **File Excel Terkunci**: Pastikan semua file Excel di folder `input/` **TERTUTUP** saat aplikasi berjalan.
 - **Token Invalid**: Aplikasi akan mencoba login ulang otomatis. Jika gagal terus-menerus, cek koneksi internet atau kredensial di `.env`.
 - **Log**: Cek file `app.log` untuk detail error.
+
+---
+*Daftar User Agent Android WebView bisa dilihat di revisi Git sebelumnya jika diperlukan.*
