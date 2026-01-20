@@ -10,6 +10,7 @@ echo.
 python --version >nul 2>&1
 if %errorlevel% neq 0 (
     echo [ERROR] Python tidak ditemukan! Harap install Python terlebih dahulu.
+    echo         Link Download: https://www.python.org/downloads/
     pause
     exit /b
 )
