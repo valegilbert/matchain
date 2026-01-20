@@ -1,5 +1,5 @@
 @echo off
-title MatchaIn GC - INSTALL & RUN
+title MatchaIn GC - INSTALL AND RUN
 
 echo ===================================================
 echo   MatchaIn GC (Matcha Input Gak Culun) - SETUP
