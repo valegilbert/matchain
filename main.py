@@ -409,6 +409,7 @@ def print_validation_rules():
        - Jika alamat_usaha kosong, edit_alamat harus '0'.
     7. Lokasi        : Latitude & Longitude harus berada dalam
                        wilayah kabupaten (berdasarkan kolom kdkab).
+                       (Harus dua-duanya terisi atau dua-duanya kosong)
     =======================================================
     """
     print(rules)
@@ -474,7 +475,15 @@ def validate_row_data(row, bbox_map):
         validation_errors.append("alamat_usaha kosong tapi edit_alamat bukan 0")
 
     # --- VALIDASI LOKASI ---
-    if bbox_map and kdkab_val:
+    # Cek kelengkapan lat/long: harus dua-duanya ada atau dua-duanya kosong
+    has_lat = bool(lat_val)
+    has_long = bool(long_val)
+
+    if has_lat != has_long:
+        validation_errors.append("Latitude dan Longitude harus diisi keduanya atau dikosongkan keduanya.")
+    
+    # Jika keduanya terisi, baru validasi bounding box
+    if has_lat and has_long and bbox_map and kdkab_val:
         try:
             # Pastikan format kdkab 2 digit (misal '1' jadi '01') jika perlu, 
             # tapi asumsi data excel sudah string '01'

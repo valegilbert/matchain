@@ -9,6 +9,7 @@ Aplikasi otomatisasi (bot) berbasis Python untuk melakukan input dan konfirmasi 
 *   **Validasi Cerdas**:
     *   Mengecek kelengkapan kolom wajib.
     *   **Validasi Lokasi (Geospasial)**: Memastikan koordinat (Latitude/Longitude) berada di dalam wilayah kabupaten yang sesuai (berdasarkan 2 digit kode kabupaten di kolom `kdkab`).
+    *   **Aturan Lat/Long**: Latitude dan Longitude harus diisi keduanya atau dikosongkan keduanya.
     *   Mencegah input data yang tidak konsisten.
 *   **Ketangguhan (Robustness)**:
     *   **Auto-Retry**: Menangani gangguan koneksi internet dan timeout secara otomatis.
@@ -88,8 +89,8 @@ File Excel di folder `input` **wajib** memiliki kolom-kolom berikut (nama kolom 
 | :--- | :--- |
 | `perusahaan_id` | ID Perusahaan (Wajib) |
 | `kdkab` | Kode Kabupaten (2 Digit, Wajib untuk validasi lokasi) |
-| `latitude` | Koordinat Lintang |
-| `longitude` | Koordinat Bujur |
+| `latitude` | Koordinat Lintang (Opsional, tapi jika diisi `longitude` juga harus diisi) |
+| `longitude` | Koordinat Bujur (Opsional, tapi jika diisi `latitude` juga harus diisi) |
 | `hasilgc` | Kode Hasil GC (`1`, `3`, `4`, atau `99`) |
 | `edit_nama` | Flag edit nama (`0` atau `1`) |
 | `edit_alamat` | Flag edit alamat (`0` atau `1`) |
