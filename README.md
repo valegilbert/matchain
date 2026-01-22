@@ -80,6 +80,7 @@ Jika Anda ingin mengubah `CUSTOM_USER_AGENT` di `main.py` untuk mensimulasikan p
 *   `processed/`: File yang sudah selesai 100% diproses akan dipindahkan ke sini.
 *   `app.log`: File log detail untuk teknis/debugging.
 *   `session.json`: File penyimpan sesi login (dibuat otomatis).
+*   `bounding_boxes.json`: File JSON berisi data batas wilayah untuk validasi lokasi.
 
 ## 📝 Format Excel
 
