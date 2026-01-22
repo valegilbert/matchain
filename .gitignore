@@ -17,9 +17,7 @@ app.log
 
 # Application Data (Real Data)
 session.json
-gc_token.txt
-data.xlsx
-data_backup.xlsx
+*.xlsx
 
 # Data Folders (Real Data)
 # Ignore all contents of input/ and backup/ by default

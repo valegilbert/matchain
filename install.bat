@@ -35,13 +35,11 @@ if exist "requirements.txt" (
 
 :: 5. Jalankan Aplikasi
 echo.
-echo [INFO] Menjalankan aplikasi...
+echo [INFO] Instalasi Selesai...
 echo ===================================================
-echo.
-python main.py
 
 echo.
 echo ===================================================
-echo   Aplikasi berhenti.
+echo   Silakan jalankan run.bat.
 echo ===================================================
 pause
